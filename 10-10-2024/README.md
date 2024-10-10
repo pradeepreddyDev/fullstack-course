@@ -1,0 +1,2 @@
+- For all sections, add Image, title, small description
+- Add to cart for all the products
