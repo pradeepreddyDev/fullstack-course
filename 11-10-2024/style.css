@@ -1,0 +1,77 @@
+/* 
+
+syntax
+=======
+
+selector {
+    property:value;
+} 
+    
+*/
+
+h2 {
+    color: blue;
+}
+
+
+/*
+
+Class syntax
+.selector
+{
+    property:value;
+}
+
+*/
+
+.myparagraph {
+    text-align: center;
+    font-size: 70px;
+    color: cornflowerblue;
+}
+
+
+/* ID selector
+#selector
+{
+    property:value;
+}
+*/
+
+#idselector {
+
+    font-style: italic;
+    font-weight: bold;
+    font-size: large;
+    color: magenta;
+}
+
+
+/* Universal selector
+*
+{
+    property:value;
+}
+*/
+
+* {
+    padding: 50px;
+}
+
+
+p {
+    color: maroon;
+}
+
+/*Desendant Selector
+
+selector selector {
+    property: value;
+
+}
+
+*/
+
+div p {
+    color: chartreuse;
+}
