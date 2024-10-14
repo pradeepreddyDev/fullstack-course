@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marquee Effect with Bootstrap and CSS</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Marquee container */
+        .marquee-container {
+            overflow: hidden;
+            width: 100%; /* Full width of the screen */
+            background-color: #f8f9fa;
+            padding: 10px 0;
+        }
+
+        /* Marquee content */
+        .marquee-content {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marquee 10s linear infinite; /* Infinite scrolling animation */
+        }
+
+        /* Animation to create the marquee effect */
+        @keyframes marquee {
+            0% {
+                transform: translateX(100%); /* Start from the right */
+            }
+            100% {
+                transform: translateX(-100%); /* End at the left */
+            }
+        }
+
+        /* Styling for the images */
+        .marquee-content img {
+            width: 150px;
+            height: 150px;
+            margin-right: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <!-- Images to scroll -->
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Spring_Lake%2C_New_Jersey_Beach_at_Sunrise.jpg/1200px-Spring_Lake%2C_New_Jersey_Beach_at_Sunrise.jpg" alt="Image 1">
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
