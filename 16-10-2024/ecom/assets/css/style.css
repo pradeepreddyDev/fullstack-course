@@ -1,0 +1,12 @@
+/* Custom styling for the eCommerce website */
+h1, h2, h3, h4, h5 {
+    color: #333;
+  }
+  .bg-dark {
+    background-color: #343a40 !important;
+  }
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
