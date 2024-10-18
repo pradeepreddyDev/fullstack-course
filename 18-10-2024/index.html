@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>Javascipt examples</title>
+    </head>
+    <body>
+        <!-- diplay alert message-->
+
+        <button id="alertbtn">click to see alert button</button>
+
+        <script>
+            document.getElementById("alertbtn").addEventListener('click', 
+
+                function(){
+                    alert('Hello world');
+                }
+
+             );
+        </script>
+
+        <!-- change text content -->
+
+        <p id="mytext"> This is original text</p>
+
+        <button id="changetext">Change text when clicks</button>
+
+
+        <button id="changebgcolor">Change color when clicks</button>
+
+
+        <script>
+            document.getElementById('changetext').addEventListener('click', 
+
+            function(){
+
+                document.getElementById("mytext").innerHTML = "I have replaced text with js when button click";
+
+            }
+
+            );
+
+            //  Change background color
+
+            document.getElementById("changebgcolor").addEventListener('click',
+
+                function() {
+
+                    document.getElementById("mytext").style.backgroundColor = "grey";
+
+                }
+
+            )
+            
+
+        </script>
+
+
+       
+        <img id="imgid" src="/home/pradeep/Fullstack-Course/14-10-2024/images/about.jpg">
+
+        <button id="changeimage"> Change image</button>
+
+
+        <script>
+
+
+            document.getElementById("changeimage").addEventListener('click', function(){
+
+                document.getElementById('imgid').src = "/home/pradeep/Fullstack-Course/14-10-2024/images/contact.jpg";
+            });
+
+        </script>
+
+
+
+    </body>
+</html>
