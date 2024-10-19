@@ -1,0 +1,35 @@
+<html>
+    <head>
+        JS examples
+    </head>
+    <body>
+
+        <form id="myform">
+
+            <input type="text" id="name" placeholder="Enter your name" />
+            <input type="submit" value="submit" />
+            
+        </form>
+
+        <div id="box" style="width: 100px; height: 100px; background-color: red; position: relative;"></div>
+        <button id="move">MOVE BOX</button>
+
+        <script>
+            document.getElementById('myform').addEventListener('submit', function(){
+                event.preventDefault(); // prevent the form from refreshing the page
+                let name = document.getElementById('name').value;
+
+                if (name == '') {
+                    alert('Name must be filled out');
+                    event.preventDefault();
+                }
+            });
+
+            document.getElementById('move').addEventListener('click', function(){
+                document.getElementById('box').style.left = '500px';
+            })
+            
+        </script>
+
+    </body>
+</html>
