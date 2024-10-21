@@ -1,0 +1,128 @@
+<html>
+    <head>
+        <title>JS Examples</title>
+        <style>
+            /* p {
+                opacity: 0;
+                transition: opacity 2s;
+            } */
+        </style>
+    </head>
+    <body>
+       <p id="fadethis">I will fade in </p> 
+       <button id="fadeinbutton">FADE IN</button>
+
+       <script>
+        document.getElementById('fadeinbutton').addEventListener('click', function(){
+            document.getElementById('fadethis').style.opacity = 1;
+        })
+       </script>
+
+        <!-- ACCORDION -->
+
+        <h3 data-target="content"  class="accord" > What we are learning?</h3>
+        <p id="content" style="display: none;">We are learning JS</p> 
+
+        <h3  data-target="content2"  class="accord"> At which Speed? </h3>
+        <p id="content2" style="display: none;">5km to 70km</p> 
+
+        <h3  data-target="content2"  class="accord"> At which Speed? </h3>
+        <p id="content2" style="display: none;">5km to 70km</p> 
+
+        <h3  data-target="content3"  class="accord"> At which Speed? </h3>
+        <p id="content3" style="display: none;">5km to 70km</p> 
+
+        <h3  data-target="content4"  class="accord"> At which Speed? </h3>
+        <p id="content4" style="display: none;">5km to 70km</p> 
+
+        <h3  data-target="content5"  class="accord"> At which Speed? </h3>
+        <p id="content5" style="display: none;">5km to 70km</p> 
+
+
+       <!-- TIMER -->
+
+       <p id="timer">100</p>
+       <button id="startTimerButton">Start Countdown</button>
+
+       <!--play audio -->
+
+       <audio id="audio" src="Chuttamalle.mp3">DEVARA SONG</audio>
+
+       <button id="playbutton">Play audio</button>
+
+
+       <!--Display Current time-->
+
+       <p id="time"></p>
+
+
+       <!-- Change background on Hover -->
+
+       <div id="hoverDiv" style="width: 500px; height: 500px; background-color: red;"></div>
+
+
+       <script>
+
+        const hovdiv = document.getElementById('hoverDiv');
+
+
+        hovdiv.addEventListener('mouseover', function(){
+            hovdiv.style.backgroundColor = 'green';
+        });
+
+
+        hovdiv.addEventListener('mouseout', function(){
+            hovdiv.style.backgroundColor = 'red';
+        });
+
+
+
+        // document.getElementById('accord').addEventListener('click', function(){
+        //     let content = document.getElementById('content');
+        //     content.style.display = content.style.display == 'none' ? 'block' : 'none';
+        // });
+
+
+        // document.getElementById('accord2').addEventListener('click', function(){
+        //     let content = document.getElementById('content2');
+        //     content.style.display = content.style.display == 'none' ? 'block' : 'none';
+        // });
+
+        function displayTime(){
+            let now = new Date();
+            document.getElementById('time').innerText = now.toLocaleTimeString();
+        }
+
+        setInterval(displayTime, 1000)
+
+
+        document.getElementById('playbutton').addEventListener('click',function(){
+            document.getElementById('audio').play()
+        })
+
+
+        document.querySelectorAll('.accord').forEach(function(accordELement)  {
+
+            accordELement.addEventListener('click', function(){
+                const targetID = this.getAttribute('data-target');
+                console.log(targetID);
+                const content = document.getElementById(targetID);
+                console.log(content)
+                content.style.display = content.style.display == 'none' ? 'block' : 'none';
+            });
+        });
+
+
+        document.getElementById('startTimerButton').addEventListener('click', function(){
+            let time = 100;
+            let interval = setInterval(function(){
+                time--;
+                document.getElementById('timer').innerText = time;
+                if(time <= 0) clearInterval(interval) },1000);
+            });
+
+       </script>
+
+
+    </body>
+</html>
