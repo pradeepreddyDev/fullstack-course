@@ -1,0 +1,152 @@
+<html>
+    <body>
+
+        <!--
+            const is used to declare constants, meaning their values cannot be changed after instialization or assignment
+        -->
+
+
+        <input id="table" type="number" >
+        <button onclick="mul()" >Print Multiplication</button>
+
+        <script>
+
+            const pi = 3.14;
+            console.log(pi);
+            //pi = 5.2;
+
+            /*
+                Object creation syntax
+
+                var variable_name = {
+                
+                    key : value,
+                    key: value
+
+                };
+
+                mutable vs immutable
+
+                While const prevents reassignment of the variable, it does not make the object immutable. You can still chagne the properties of an object declared with const
+
+            */
+
+
+
+
+            const person = { 
+
+                name : "Pradeep",
+                education: "Mtech",
+                location: "Hyd"
+
+            };
+
+            person.name = "Reddy";
+
+            console.log(person.name);
+            console.log(person.education);
+            console.log(person.location);
+
+            //person = {};
+
+
+            const colors = ["red", "green", "blue","black"];
+            console.log(colors[3]);
+            //colors = ["wh"];
+
+
+            /* Variables Scope */
+
+
+            var gvar = "I'm global";
+            let globalLet = "I'm global let";
+            var lvar = "localvar";
+
+
+            function checkGlobal(){
+               
+                console.log(lvar);
+                console.log(gvar);
+                console.log(globalLet);
+            }
+
+            console.log(lvar);
+            checkGlobal();
+
+            var messgae = "function scope with var";
+
+            function testvar(){
+               
+                console.log(messgae);
+            }
+
+            testvar();
+            console.log(messgae);
+
+
+            var x = 5;
+            //console.log(x);
+            var x = 10;
+            var x = 3;
+            var x = 33;
+            console.log(x);
+
+           
+            //variable with loop
+            // Intialization, condition, increment/decrement
+
+            console.log("loop-start");
+
+            for(var i=5; i<10; i++) {
+
+                console.log(i); //
+
+            }
+
+            console.log("loop-ended");
+
+
+
+            
+            function mul(){
+
+                var k = document.getElementById('table').value;
+
+                for(var i=1; i<=10; i++) {
+
+                console.log(`${k} x ${i} = ${k*i}`);  
+
+                }
+
+            }
+
+
+            /*
+            
+            5
+            6
+            7
+            8
+            9   
+            
+            */
+
+
+            /*
+                i = 0; first step
+
+                i < 3: second step check condition
+
+                0 ; third step console.log
+
+                increment or decrement 
+
+
+            */
+
+
+        </script>
+
+    </body>
+</html>
