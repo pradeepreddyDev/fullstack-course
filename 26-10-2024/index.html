@@ -1,0 +1,230 @@
+<html>
+    <body>
+        <script>
+            /* Data Types: Numbers, Strings, Booleans, Null, Undefined, Symbols, and Objects */
+
+            /* Javascript is dyanimcTyped programming language*/
+
+            
+            const TAX_RATE = 0.08; // number - floating point
+            let price = 50;
+            let quatity = 3;
+            let totalprice = price * quatity * (1+TAX_RATE);
+            console.log(`Total price: ${totalprice} `);
+
+
+
+            let integerNum = 42;
+            let floatNum = 3.14;
+            let negativeNum = -10;
+            let largeNum = 1e6;
+            let hexNum = 0xFF;
+            let binaryNum = 0b1010;
+            let octalNum = 0o17;
+
+
+            /* Binary number system
+               
+               Representation: uses only 0 and 1;
+               
+               1011   
+            
+
+                Binary: Machine Code, low level operations
+                Octal: Legacy systems, low level
+                Decimal: data represenation and general user interface
+                Hexadecimal: color representation, Memory addressesing 
+
+
+                1/0 = infinity
+
+                -1/0 = -infinity
+
+                
+            */
+
+            console.log(1/0);
+            console.log(-1/0);
+            console.log("abc"*3);
+
+
+            // common methods
+
+            let num = 123.45678
+            console.log(num.toFixed(3));
+            console.log(num.toExponential());
+
+            console.log(Number.isInteger(42));
+            console.log(Number.isNaN("abc"*3))
+
+
+            /*
+
+            Strings:
+
+            Strings can be created using single quotes ('') double quotes ("") and (``) 
+            
+            */
+
+
+            let singlequote = 'Hello world';
+
+            let doubleQuote = "javascript";
+
+            let templateLiteral = `Hello, ${singlequote} ${doubleQuote} `;
+
+
+            console.log(templateLiteral);
+
+
+            // properties and methods in strings
+
+
+            let greeting = "Hello world";
+
+
+            console.log(greeting.length); //11
+            console.log(greeting.toUpperCase());
+            console.log(greeting.toLowerCase());
+
+            console.log(greeting.includes("pradeep")); //true
+
+            console.log(greeting.slice(0,5));
+
+            console.log(greeting.replace("world", "Javascript"));
+
+
+            // Boolean, logical entity, true or false. 
+
+
+            let isActive = true;
+
+            let hasPermission = false;
+
+            let result = 10 < 5; //true
+
+            console.log(result);
+
+
+            let age = 16;
+
+            if (age >= 18) {
+                console.log("You are an adult");
+            } else {
+                console.log("You are a minor");
+            }
+
+
+            // Null 
+
+            let emptyVar = null;
+
+            console.log(emptyVar);
+
+
+            let user = {name: "Alice", age: null};
+
+            console.log(user);
+
+
+            // Undefined
+
+            let unassginedVar;
+            console.log(unassginedVar);
+
+            function greet(name) {
+                console.log(name);
+            }
+
+            greet("Hey");
+
+
+
+            let x = null;
+
+            let y;
+
+            console.log(y == null); // true
+            console.log(x == undefined); //true
+
+
+
+            // Symbol
+
+
+            let sym1 = Symbol("id");
+            let sym2 = Symbol("id");
+
+            console.log(sym1 == sym2);
+
+
+            // Objects
+
+            let car = {
+
+                make: "Toyota",
+                model: "Fortuner",
+                year: 2021,
+                start: function() {
+                    console.log("Car started");
+                }
+
+            };
+
+            console.log(car.make);
+
+            console.log(car.start());
+
+
+
+
+            let student = {
+                name : "Pradeep",
+                location: "hyd",
+                courses: ["Maths", "Physics", "Chemistry"]
+            };
+
+
+            console.log(student.courses);
+
+
+            let employee = {
+
+                id: 101,
+                name: "reddy",
+                address : {
+                    street : "123 main st",
+                    city: {
+                        area : "medchal",
+                        pin: {
+                            loc: ['div1', 'div2', 'div3']
+                        }
+                    },
+                    country: "India"
+
+                }
+
+            };
+
+
+            console.log(employee.address.city.pin.loc[2]);
+
+
+
+            // objects with functions
+
+            let calculator = {
+                add: function(a,b){
+                    return a + b;
+                },
+                sub: function(a,b){
+                    return a - b;
+                }
+            };
+
+            console.log(calculator.add(5,3));
+            console.log(calculator.sub(5,3));
+
+        </script>
+    </body>
+</html>
