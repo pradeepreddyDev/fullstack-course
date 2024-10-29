@@ -1,0 +1,164 @@
+<html>
+    <body>
+        <script>
+            let currentDate = new Date();
+
+            let numbers = [1,2,3];
+
+            console.log(currentDate);
+            console.log(numbers);
+
+
+            //user defined
+
+            let person = {
+                name: "John",
+                age: 30
+            }
+            
+
+            let obj1 = {a:1};
+            let obj2 = {a:1};
+
+            console.log(obj1.a == obj2.a);
+
+
+            // chartAt() vs At()
+
+            let text = "Hello"
+
+            console.log(text.charAt(1)); //e
+
+
+            console.log(text.charAt(10)); // ""
+            //console.log(text.At(10)); // ERROR
+
+            a = 1+2;
+            b = 3+4;
+            c = 4+5;
+            d = 6+7;
+            e = 5;
+            console.log(a+b-c/d*e); //BODMAS
+
+
+            /* Operators 
+            
+            Arithmetic Operators
+
+              Operator  Description     Example    result    
+               +        Addition         5+2        7
+               -        Sub              5-2        3
+               *        Mul              5*2        10
+               /        Div              5/2        2.5
+               %        Modulus(rem)     5%2        1
+              
+                
+            
+            
+
+            
+            */
+
+            //Increment
+            let x = 5;
+            x++; // x = x + 1;
+            console.log(x);
+            
+
+            //decrement
+            let y = 5;
+            y--; // x = x + 1;
+            console.log(y);
+
+
+            let z = 5 ** 10;
+            console.log(z);
+
+
+
+            /* Assigment Operators */
+
+            let j = 5;
+            //j += 5; // a = a+5
+            //j -= 5;
+            //j *= 5;
+            //j /= 5;
+            //j %= 5;
+            //j **= 3;
+            console.log(j);
+
+
+            /* Comparision operators */
+
+            let i = 5;
+
+            console.log(5 == "5"); //Equal to compares only value
+            console.log(5 === "5"); //strictly equal (type and value)
+            console.log(5 != "5"); //Not equal  
+            console.log(5 !== "5"); // strictly not equal
+            console.log(5 > 3); // Greater than
+            console.log(5 < 3); // Greater than
+            console.log(5 >= 5); // Greater than or equal
+            console.log(5 <= 5); // less than or equal
+
+
+            /* Logical Operators 
+            
+            AND
+
+            T T = T
+            T F = F
+            F F = F
+            F T = F
+
+            OR ||
+
+            T T = T
+            F F = F
+            T F = T
+            F T = T
+            
+            NOT (!)
+            
+            */
+
+
+            //Logical AND (&&)
+
+            var a = true;
+            var b = false;
+            
+
+            console.log(a && b); // false T F = F
+
+            console.log(a || b); // false F F = F   
+
+            console.log(!a); //false
+
+
+            // Ternary Operator
+
+            // Syntax condition ? expressionIfTrue : expressionFalse;
+
+
+            let age = 18;
+            let message = age >= 18 ? "Eligible to vote" : "not eligible to vote";
+            console.log(message);
+
+
+            // Finding area of the circle
+
+            let radius = 5;
+
+            let area =  Math.PI * (radius ** 2);
+
+            console.log(area);
+
+
+
+
+
+
+        </script>
+    </body>
+</html>
