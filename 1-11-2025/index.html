@@ -1,0 +1,184 @@
+
+<script>
+
+/* Sum of even numbers */
+
+let number = 3;
+let sum = 0;
+while (number <=  10){
+    
+    sum = sum + number; // sum += number; 3+6+9+12
+    number += 3;
+
+}
+/*
+number = 2
+sum = 0
+sum = sum + number = 0 + 2 = 2
+number = number + 2 = 4
+
+
+number = 4
+sum = 2
+sum = sum + number = 2 + 4 = 6
+number = 4 + 2 = 6
+
+
+number = 6
+sum = 6
+sum = sum + number = 6 + 6 = 12
+number = 6 + 2 = 8
+
+
+number = 8
+sum = 12
+sum = sum + number = 12 + 8 = 20
+number = 8 + 2 = 10
+
+
+number = 10
+sum = 20
+sum = sum + number = 10 + 20 = 30
+number = 10 + 2 = 12
+
+
+
+*/
+// console.log("Sum of 3 mul numbers:",sum);
+
+
+// let multiplier = 1;
+// while (multiplier <= 10) {
+//     console.log("3 X " + multiplier + " = " + (19 * multiplier));
+//     multiplier++;
+// }
+
+
+// Promt until correct answer
+
+/*
+let answer;
+
+while(answer !== "42") {
+    answer = prompt("what is the answer to life");
+}
+
+console.log("Correct");
+
+// check number is positive 
+
+let num = -1;
+
+while (num < 0) {
+
+       num =  prompt("Enter a positive number");
+       num = Number(num);
+}
+console.log("Positive number entered:", num); 
+
+
+// adding items in array or list
+
+let items = [];
+
+let item;
+
+while (items.length < 5) {
+    item = prompt("enter a item");
+    items.push(item);
+}
+
+console.log("Items entered:", items)
+
+let num = 1;
+while (num % 7 !== 0) {
+    console.log(num);
+    num++;
+}
+
+console.log("first number divisible by 7 is: ", num);
+
+
+// print odd numbers less than 20
+
+
+let num = 1;
+
+while (num < 20){
+
+    //console.log(num);
+
+    if (num % 2 !== 0) {
+        console.log(num);
+    }
+
+    num++;
+}
+
+// Calculate factorial of a given number
+
+// 5 factorial of 5  = 5x4x3x2x1 = 120
+
+let num = 5;
+let factorial = 1;
+
+
+while (num > 1) {
+    console.log(num);
+    // factorial = factorial * num; 
+    factorial *= num;
+    num--;
+}
+
+console.log("Factorial:", factorial);
+
+// Repeat message number of times
+
+let times = 3;
+let count = 1;
+
+while (count <= times) {
+    console.log("Hello, this is message number", count);
+    count++;
+}  
+
+// sum of array elements
+
+
+let numbers = [11,22,33,43,55];
+let summ = 0;
+let i = 0;
+
+while(i < numbers.length){
+    console.log(numbers[i]);
+    //sum = sum + numbers[i];
+    sum += numbers[i]
+    i++;
+}
+
+console.log("Sum of array:", sum);
+
+
+let num = 0;
+
+while (num < 90) {
+    num = Math.floor(Math.random() * 100);
+    console.log("generated num:", num);
+}
+    */
+
+// print each character of a string
+
+let text = "javascript";
+let i = 0;
+while (i < text.length) {
+    console.log(text[i]);
+    i++;
+}
+
+
+
+
+
+
+</script>
