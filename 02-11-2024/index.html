@@ -1,0 +1,62 @@
+
+
+<html>
+    <head>
+        <style>
+            div {
+                background-color: lightblue;
+                padding: 10px;
+                margin: 10px;
+            }
+
+            .relative-box {
+                position: relative;
+
+                background-color: lightblue;
+                padding: 10px;
+                margin: 10px;
+                top: 20px;
+                left: 10px;
+            }
+
+
+            .relative-box-2 {
+                position: relative;
+
+                background-color: lightblue;
+                padding: 10px;
+                margin: 10px;
+                top: 20px;
+                left: 10px;
+            }
+
+            .absolute-box {
+                position: absolute;
+                top: 50px;
+                left: 50px;
+                background-color: pink;
+                padding: 10px;
+            }
+
+
+
+
+        </style>
+    </head>
+    <body>
+        <div>
+            This is statitically placed!!
+        </div>
+
+
+        <span class="relative-box">
+            This is statitically placed!!
+        </span>
+
+
+        <span class="relative-box-2">
+            <span class="absolute-box">Absolute position</span>
+        </span>
+
+    </body>
+</html>

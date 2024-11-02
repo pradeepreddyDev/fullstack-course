@@ -1,0 +1,65 @@
+<html>
+    <body>
+
+        <script>
+
+
+            /* Do while loop 
+            
+            The Do while loop is similar to the while loop, but it always execute the code block at least once before checking the condition
+
+            do {
+            ----
+            ----            
+            } while (condition)
+
+            */
+
+
+            let num = 5;
+            do {
+                console.log("Number:", num);
+                num++;
+            } while (num <= 3);
+
+
+            /*
+            let correctPassword = "secure123"; 
+            let userPassword;
+
+            do {
+                userPassword = prompt("Enter the password");
+                if (userPassword !== correctPassword) {
+                    console.log("Incorrect password");
+                }
+            } while(userPassword !== correctPassword);
+
+
+            console.log("login success!!"); */
+
+
+
+            // Calulate average score
+
+            let scores = [90,85,100,75,95];
+            let total = 0,
+            countScores = 0;
+
+            do {
+
+                total += scores[countScores];
+                countScores++;
+            }   while (countScores < scores.length);
+
+            let average = total / scores.length;
+
+            console.log("Average score:", average)
+
+
+
+
+        </script>
+
+
+    </body>
+</html>
