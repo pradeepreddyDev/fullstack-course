@@ -1,0 +1,139 @@
+<html>
+    <body>
+        <script>
+            /*
+                Nested for loops
+
+           
+
+            for (let i=1; i<=5; i++) {
+
+                //statements 
+                //console.log("i=",i);
+                let row ="";
+                for (let j=1; j<=5; j++) {
+                    //row += (i*j) + "\t";
+                    row += `${i+j}__`;
+                    //console.log("j=",j);
+                }
+                console.log(row);                
+            } */
+
+
+            //using for with arrays, finding the maximum value in the array
+             /*
+            let numbers = [100,78,15,92,56,39];
+            let max = numbers[0];
+
+            //console.log(max);
+
+            for (let i=1; i < numbers.length; i++ ) {
+                if (numbers[i] > max) {
+                    max = numbers[i];
+                }
+            }
+
+
+           
+            
+            i = 1
+            max = 34
+            numbers[i] = 78
+            numbers[i] > max  //78 > 34 true
+            max = numbers[i] // 78
+
+
+            i = 2
+            max = 78
+            numbers[i] = 15
+            numbers[i] > max // 15 > 78 false
+            max = 78
+
+
+            i = 3
+            max = 78
+            numbers[i] = 92
+            numbers[i] > max // 92 > 78 true
+            max = numbers[i] // 92
+
+            
+
+            i = 4
+            max = 92
+            numbers[i] = 56
+            numbers[i] > max // 56  > 92 false
+            max = 92
+
+
+            i = 5
+            max = 92
+            numbers[i] = 39
+            numbers[i] > max // 39  > 92 false
+            max = 92
+
+
+           
+
+
+
+            console.log(max);
+
+            // for loops with objects using for...in
+
+            let person = {
+
+                name: "john",
+                age: 30,
+                profession: "developer"
+
+            };
+
+
+            for (let key in person) {
+
+                console.log(key + " : " + person[key]);
+
+            }
+            
+
+
+            const fruits = ["apple", "banana", "orange", "kiwi"];
+
+            console.log(fruits[2]);
+
+            for (let index in fruits) {
+                //console.log(index);
+                console.log(fruits[index]);
+            }
+        */
+
+
+        const student = {
+            name : "bob",
+            grades: {
+                math: 90,
+                science: 85,
+                history: 88
+            },
+            education: {
+                ssc: "80%",
+                inter: "70%",
+                btech: "60%"
+            }
+        };
+
+
+        for (let subject in student.grades) {
+            console.log(subject + ":" + student.grades[subject]);
+        }
+
+
+        for (let ed in student.education) {
+            console.log(ed + ":" + student.education[ed]);
+        }
+
+
+
+        </script>
+    </body>
+</html>
