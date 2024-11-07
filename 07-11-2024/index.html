@@ -1,0 +1,314 @@
+<html>
+
+    <body>
+        <script>
+
+            /*
+            for loop pyramid in reverse
+            *********
+             *******
+              *****
+               ***
+                *            
+            
+
+
+            let rows = 5;
+
+            for(let i= rows; i >= 1; i--) {
+
+                let spaces = ' '.repeat(rows - i);
+
+                let stars = '*'.repeat(2*i-1);
+
+                console.log(spaces + stars);
+            }
+                
+
+                *
+               **
+              ***
+             ****
+            *****
+
+            
+
+
+            // Right aligned pyramid
+
+            let rows = 5;
+
+            for(let i=1; i<=rows; i++){
+                let spaces = ' '.repeat(rows - i);
+                let stars = '*'.repeat(i);
+                console.log(spaces+stars);
+            }
+*/
+
+            /*
+            
+            rows = 5
+            i =1
+            spaces = rows - i = 5 - 1 = 4
+            stars = i = 1
+            ____*    
+
+
+            rows = 5
+            i=2
+            spaces = rows - i = 5 - 2 = 3
+            stars = i = 2
+            ___**    
+
+
+            rows = 5
+            i=3
+            spaces = rows - i = 5 - 3 = 2
+            stars = i = 3
+            __***    
+
+
+            rows = 5
+            i=4
+            spaces = rows - i = 5 - 4 = 1
+            stars = i = 4
+            _****    
+
+
+            rows = 5
+            i=5
+            spaces = rows - i = 5 - 5 = 0
+            stars = i = 5
+            *****
+            
+            OUTPUT
+            ======
+                *
+               **
+              ***
+             ****
+            *****
+
+
+
+            Diamond shape pyramid
+
+            
+
+            let rows = 5;
+
+            for (let i =1; i <= rows; i++) {
+                let spaces = ' '.repeat(rows-i);
+                let stars = '*'.repeat(2*i-1);
+                console.log(spaces + stars);
+            }
+
+            for(let i=rows-1; i >= 1; i--) {
+                let spaces = ' '.repeat(rows - i);
+                let stars = '*'.repeat(2*i-1);
+                console.log(spaces + stars);
+            }
+
+
+            1
+           2 2
+          3 3 3
+         4 4 4 4
+        5 5 5 5 5
+
+
+        
+
+        // Number pyramid
+
+        let rows = 5;
+
+        for (let i=1; i<=rows; i++){
+            let spaces = ' '.repeat(rows-i);
+            let numbers = `${i} `.repeat(i);
+            console.log(spaces + numbers);
+        }*/
+
+
+        /*
+        
+            rows = 5
+            i=1
+            spaces = rows - i = 5 - 1 = 4
+            numbers = i space = 1
+            ____1  
+
+
+            rows = 5
+            i=2
+            spaces = rows - i = 5 - 2 = 3
+            numbers = i = 2
+            ___2 2 
+
+
+            rows = 5
+            i=3
+            spaces = rows - i = 5 - 3 = 2
+            numbers = i space = 3
+            __3 3 3    
+
+
+            rows = 5
+            i=4
+            spaces = rows - i = 5 - 4 = 1
+            numbers = i space= 4
+            _4 4 4 4    
+
+
+            rows = 5
+            i=5
+            spaces = rows - i = 5 - 5 = 0
+            numbers = i space = 5
+            5 5 5 5 5
+            
+            OUTPUT
+            ======
+                1
+               2 2
+              3 3 3
+             4 4 4 4
+            5 5 5 5 5  
+            
+            
+            1
+           1 0
+          1 0 1
+         1 0 1 0
+        1 0 1 0 1
+        
+        */
+
+        // Binary pyramid
+
+        let rows = 5;
+        
+        for (let i=1; i<=rows; i++){
+            let spaces = ' '.repeat(rows - i);
+            let row = '';
+            for (let j=1; j<=i; j++){
+                row += (j%2) + ' ';
+            }
+            console.log(spaces + row);
+        }
+
+
+        /*
+            row = '';
+            rows = 5
+            i=1
+            spaces = rows - i = 5 - 1 = 4
+            j=1
+            row += (j%2) + ' ' // row = 1 % 2 = 1
+            spaces + row = ____1 
+
+
+            
+
+            row = '';
+            rows = 5
+            i=2
+            spaces = rows - i = 5 - 2 = 3 
+
+            j=1
+            row += (j%2) + ' ' // row = 1 % 2 = 1
+
+
+            j=2
+            row += (j%2) + ' ' // row = 2 % 2 = 0
+
+            spaces + row = ___1 0
+
+
+            
+
+            row = '';
+            rows = 5
+            i=3
+            spaces = rows - i = 5 - 3 = 2 
+
+            j=1
+            row += (j%2) + ' ' // row = 1 % 2 = 1
+
+
+            j=2
+            row += (j%2) + ' ' // row = 2 % 2 = 0
+
+
+            j=3
+            row += (j%2) + ' ' // row = 3 % 2 = 1
+
+            spaces + row = __1 0 1
+            
+
+
+            
+
+            row = '';
+            rows = 5
+            i=4
+            spaces = rows - i = 5 - 4 = 1 
+
+            j=1
+            row += (j%2) + ' ' // row = 1 % 2 = 1
+
+
+            j=2
+            row += (j%2) + ' ' // row = 2 % 2 = 0
+
+
+            j=3
+            row += (j%2) + ' ' // row = 3 % 2 = 1
+
+
+            j=4
+            row += (j%2) + ' ' // row = 4 % 2 = 0
+
+            spaces + row = __1 0 1 0
+            
+
+
+            
+
+            row = '';
+            rows = 5
+            i=5
+            spaces = rows - i = 5 - 5 = 0 
+
+            j=1
+            row += (j%2) + ' ' // row = 1 % 2 = 1
+
+
+            j=2
+            row += (j%2) + ' ' // row = 2 % 2 = 0
+
+
+            j=3
+            row += (j%2) + ' ' // row = 3 % 2 = 1
+
+
+            j=4
+            row += (j%2) + ' ' // row = 4 % 2 = 0
+
+            spaces + row = __1 0 1 0
+
+
+            j=5
+            row += (j%2) + ' ' // row = 5 % 2 = 1
+
+            spaces + row =  1 0 1 0 1
+            
+            
+            */
+
+
+    
+
+        </script>
+    </body>
+
+</html>
