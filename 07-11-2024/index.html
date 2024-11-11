@@ -185,26 +185,33 @@
 
         // Binary pyramid
 
-        let rows = 5;
+        let rows = 15;
         
         for (let i=1; i<=rows; i++){
             let spaces = ' '.repeat(rows - i);
+
+
             let row = '';
             for (let j=1; j<=i; j++){
                 row += (j%2) + ' ';
             }
+
+
             console.log(spaces + row);
         }
 
 
         /*
+            1 2 3 4 5
+
             row = '';
             rows = 5
             i=1
             spaces = rows - i = 5 - 1 = 4
-            j=1
-            row += (j%2) + ' ' // row = 1 % 2 = 1
-            spaces + row = ____1 
+            
+                j=1
+                row += (j%2) + ' ' // row = 1 % 2 = 1
+                spaces + row = ____1 
 
 
             
@@ -214,14 +221,14 @@
             i=2
             spaces = rows - i = 5 - 2 = 3 
 
-            j=1
-            row += (j%2) + ' ' // row = 1 % 2 = 1
+                j=1
+                row += (j%2) + ' ' // row = 1 % 2 = 1
 
 
-            j=2
-            row += (j%2) + ' ' // row = 2 % 2 = 0
+                j=2
+                row += (j%2) + ' ' // row = 2 % 2 = 0
 
-            spaces + row = ___1 0
+                spaces + row = ___1 0
 
 
             
@@ -231,19 +238,19 @@
             i=3
             spaces = rows - i = 5 - 3 = 2 
 
-            j=1
-            row += (j%2) + ' ' // row = 1 % 2 = 1
+                j=1
+                row += (j%2) + ' ' // row = 1 % 2 = 1
 
 
-            j=2
-            row += (j%2) + ' ' // row = 2 % 2 = 0
+                j=2
+                row += (j%2) + ' ' // row = 2 % 2 = 0
 
 
-            j=3
-            row += (j%2) + ' ' // row = 3 % 2 = 1
+                j=3
+                row += (j%2) + ' ' // row = 3 % 2 = 1
 
-            spaces + row = __1 0 1
-            
+                spaces + row = __1 0 1
+                
 
 
             
@@ -253,22 +260,22 @@
             i=4
             spaces = rows - i = 5 - 4 = 1 
 
-            j=1
-            row += (j%2) + ' ' // row = 1 % 2 = 1
+                j=1
+                row += (j%2) + ' ' // row = 1 % 2 = 1
 
 
-            j=2
-            row += (j%2) + ' ' // row = 2 % 2 = 0
+                j=2
+                row += (j%2) + ' ' // row = 2 % 2 = 0
 
 
-            j=3
-            row += (j%2) + ' ' // row = 3 % 2 = 1
+                j=3
+                row += (j%2) + ' ' // row = 3 % 2 = 1
 
 
-            j=4
-            row += (j%2) + ' ' // row = 4 % 2 = 0
+                j=4
+                row += (j%2) + ' ' // row = 4 % 2 = 0
 
-            spaces + row = __1 0 1 0
+                spaces + row = __1 0 1 0
             
 
 
@@ -279,28 +286,28 @@
             i=5
             spaces = rows - i = 5 - 5 = 0 
 
-            j=1
-            row += (j%2) + ' ' // row = 1 % 2 = 1
+                j=1
+                row += (j%2) + ' ' // row = 1 % 2 = 1
 
 
-            j=2
-            row += (j%2) + ' ' // row = 2 % 2 = 0
+                j=2
+                row += (j%2) + ' ' // row = 2 % 2 = 0
 
 
-            j=3
-            row += (j%2) + ' ' // row = 3 % 2 = 1
+                j=3
+                row += (j%2) + ' ' // row = 3 % 2 = 1
 
 
-            j=4
-            row += (j%2) + ' ' // row = 4 % 2 = 0
+                j=4
+                row += (j%2) + ' ' // row = 4 % 2 = 0
 
-            spaces + row = __1 0 1 0
+                spaces + row = __1 0 1 0
 
 
-            j=5
-            row += (j%2) + ' ' // row = 5 % 2 = 1
+                j=5
+                row += (j%2) + ' ' // row = 5 % 2 = 1
 
-            spaces + row =  1 0 1 0 1
+                spaces + row =  1 0 1 0 1
             
             
             */

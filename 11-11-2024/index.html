@@ -1,0 +1,120 @@
+<html>
+    <body>
+        <script>
+
+            /*
+                1. Functions without parameters no return value
+           
+
+            function greet(){
+                console.log("Hello!!");
+            }
+
+            res = greet();
+            console.log(res);  */
+
+
+            /* Function with parameters and no return value 
+
+            function greet(parameter1, p2){
+                console.log("Hey, " + parameter1); // Hey, Hi Cutie!!
+                console.log("Hey, " + p2); // Hey, Hi Cutie!!
+            }
+            
+            greet("Hi Cutie", "Hi Pooja"); // undefined
+
+            3. Function with return type and with parameters
+            
+           
+
+
+            function add(a,b,c){
+                return a+b+c;
+            }
+
+            const res = add(5,3,7);
+            console.log(res); // 8  
+            
+            4. Function without parameters and multiple return values
+            
+            
+
+            function getNames() {
+                return ["Pooja", "Cutie"]
+            }
+
+            const [name1, name2] = getNames();
+            console.log(name1,name2)
+
+
+            // using an object
+            
+            function getUser(){
+
+                return { name: "Rahul", age: 25}
+            }
+
+
+            const user = getUser();
+            console.log(user.name, user.age);
+
+            
+
+
+            function getname(x) {
+
+                return function(y){
+                    return x + y;
+                }
+
+            }
+            const name = getname("hi");
+            console.log(name);
+            console.log(name("cutie"));
+            */
+
+
+            function* numberGenerator() {
+                yield "abc";
+                yield 2;
+                yield 3;
+            }
+
+
+            const generator = numberGenerator();
+            console.log(generator.next().value);
+            console.log(generator.next().value);
+            console.log(generator.next().value);
+
+
+
+
+            /* Summary 
+            
+            1. Simple Call (No Return): greet()
+            2. Call with Parameter (No return): greet(name)
+            3. Return single value: return a+b
+            4. Return multiple value: return [val1, valu2] or return {key1: val1, key2: val2}
+            4. Return Function: return function(y) {}
+            5. Generator Return : yield value           
+            
+            
+            */
+
+
+            // Single line comments
+
+            /*
+            
+            
+            
+            */
+
+
+
+        </script>
+        
+
+
+    </body>
+</html>
