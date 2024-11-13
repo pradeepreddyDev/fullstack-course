@@ -1,0 +1,142 @@
+<html>
+    <body>
+
+        <script>
+
+            /*
+            
+            Function Declartion 
+
+            A function declaration is a way to define a function. it is hoisted meaning it can be defined before its defined in the code.
+            
+            
+
+            function greet(name) {
+                return `Hello, ${name}`;
+            }
+
+           res =  greet("Cutie");
+           res =  greet("Pooja");
+           res =  greet("Pradeep");
+
+           console.log(res);
+
+            Function expression:
+
+            A function expression assigns a function to variable
+
+           
+
+
+            const greet = function(name) {
+                return `Hello, ${name}`
+            }
+
+            console.log(greet("Hello"));
+
+            3. Arrow functions        
+
+            const greet = (name) => `Hello, ${name}`;
+
+            console.log(greet('hey'));
+
+            4. Parameters
+
+            Parameters are values passed into functions allowing for dynamic functionality
+            Functions can accept default parameters
+
+           
+
+            function greet(name = "Guest", name2 = "guest2"){
+                return `Hello, ${name}, ${name2}`;
+            }
+
+            console.log(greet("Hi", "Cutie"));
+
+
+            Return values
+
+            the return statement ends the function and provides an output. if no return is provided the function returns undefined by default
+
+          
+
+
+            function add(a, b) {
+                console.log("b4 return"); //2nd step b4 return
+                return a+b;
+                console.log("after return");
+            }
+
+            console.log(add(3,5)); //1 step 8
+
+             
+
+
+              function add(a,b) {
+                return a+b;
+              }
+
+              console.log(add(2,3));
+            
+              celsius to Farenheit  
+
+              
+              
+             
+
+              function celsiusToFahrenheit(celsius) {
+                return (celsius * 9/5) + 32;
+              }
+
+              console.log(celsiusToFahrenheit(0))
+
+            
+
+
+             function area(length = 1, width = 1) {
+                return length * width;
+             }
+
+             console.log(area(5)); // 5
+             console.log(area()); // 1
+             console.log(area(5,5)); // 25
+
+
+           
+
+
+            function sum(...numbers){
+                console.log(numbers);
+                return numbers.reduce((total, num) => total + num, 0 );
+            }
+
+            
+            console.log(sum(1,2,3,4,"Hi"));
+
+
+            Combining arrays
+
+
+
+
+
+        */
+
+
+        function combinearrays(...arrays){
+            //console.log(arrays);
+
+            return [].concat(...arrays);
+        } 
+
+        const arr1 = [1,2];
+        const arr2 = [3,4];
+        const arr3 = [5,8];
+
+        console.log(combinearrays(arr1, arr2, arr3));    
+    
+        </script>
+
+
+    </body>
+</html>
