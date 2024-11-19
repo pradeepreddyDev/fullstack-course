@@ -1,0 +1,175 @@
+<html>
+    <body>
+
+        <script>
+
+            //using method in object
+
+            const rectangle = {
+                width: 10,
+                height: 5,
+                getArea() {
+                    return this.width * this.height
+                }
+            };
+
+            console.log(rectangle.getArea());
+
+
+            // this method
+
+            const user = {
+
+                name: "Pradeep",
+                greet() {
+                    return `Hello my name is ${this.name}`
+                }
+
+            }
+
+            console.log(user.greet());
+
+
+            // using this in nested objects
+
+            const company = {
+                name: "tech corp",
+                address: {
+                    city: "India",
+                    getaddress(){
+                        return `Company is in ${this.name}`
+                    }
+                }
+            }
+
+            console.log(company.address.getaddress());
+
+
+            // using arrow functions
+
+            const user2 = {
+                name: "pradeep",
+                greet: () => {
+                    return `Hello I'm ${this.name}`;
+                }
+            }
+
+
+            console.log(user2.greet());
+
+
+            // usin this in constructor functions
+
+            function User(name) {
+                this.name = name;
+            }
+
+            const person = new User("Pradeep");
+
+
+            console.log(person.name)
+
+
+            // create and initialize
+            // constructor function name always starts with Capital letter in JS
+
+            /* Steps 
+            
+            1. Create a new, empty object
+            2. sets the prototype of the new object to the prototype of the constructor function
+            3. Binds 'this' in the constructor to newly created object
+            4. Executes the constructor function code
+            5. returns newly created object            
+            */
+
+
+            // Dynamic Property Access
+
+
+            const user3 = {name: "Pradeep", address: "Hyd"}
+            const prop = "name";
+            console.log(user3[prop]);
+
+
+
+            // objects with multiple methods
+
+            const calc = {
+                add(a,b) {
+                    return a+b;
+                },
+
+                substract(a,b) {
+                    return a-b;
+                }
+            };
+
+            console.log(calc.add(5,3));
+            console.log(calc.substract(5,3));
+
+
+            const person3 = {name: "pradeep", address: "hyd", mobile: "12354"}
+
+            for (key in person3) {
+                console.log(`${key}: ${person3[key]}`);
+            }
+            
+
+            /* Accessing and modifying arrays (push, pop, shift, unshift, map, filter, reduce) */
+
+            // push() : Adds one or more elements to the end of the array and returns the new length of the array
+
+            const fruits = ["apple", "banana"];
+            f = fruits.push("cherry", "mango");
+            console.log(f);
+
+
+            //pop(): Removes the last element from the array and returns that element
+
+
+            const fruits2 = ["apple", "banana"];
+            f = fruits2.pop();
+
+            console.log(f);
+            console.log(fruits2);
+
+
+            // shift(): removes the first element from the array and returns that element
+
+
+            const animals = ["cat", "dog", "rabbit"];
+
+            const shifted_element = animals.shift();
+
+            console.log(shifted_element); //cat
+            console.log(animals); 
+
+
+            //unshift: adds one or more elements to the begining of the arrray and returs new length of the array
+
+            animals.unshift("tiger");
+            console.log(animals); 
+
+
+            //map(): creates a new array by applying function to each element of the array. original array not modified
+
+            const numbers = [1,2,3,4];
+
+            const sq = numbers.map(num => num + num);
+
+            console.log(sq);
+            console.log(numbers);
+
+
+            const numbers2 = [1,2,3,4];
+
+            const double = numbers2.map(num => num + 12);
+
+            console.log(double);
+
+
+
+        </script>
+
+    </body>
+</html>

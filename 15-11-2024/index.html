@@ -1,0 +1,79 @@
+<html>
+    <body>
+
+
+        <script>
+
+            /* Objects and Arrays */
+
+            // Creating Object with Literals
+
+            const person = {
+                name: "Pradeep",
+                address: "Hyderabad",
+                city: "Kompally"
+            }
+
+
+            // Using object Constructor
+
+            const person2 = new Object()
+
+            //console.log(person2);
+            // ACCESSING
+            person2.name = "Cutie";
+            person2.address = "Adilabad";
+            person2.city = "Ichoda";
+
+            console.log(person2['name']);
+            console.log(person2.name);
+
+
+            //ASSIGN
+            person2["name"] = "Pooja";
+
+            console.log(person2);
+
+            person2.name = "Rahul";
+
+            console.log(person2);
+
+            //DElETING PROPERTY
+
+            delete person2.city;
+
+            delete person2.address;
+
+            console.log(person2);
+
+            // CREATING an Array
+
+            const fruits = ["apple", "bannana", "mango"];
+            const numbers = new Array(1,2,3,4);
+
+            // Accessing and Modifying array elements
+
+            fruits[0] = "avacado";
+
+            console.log(fruits[0])
+
+            // Array methods
+
+            fruits.push("orange");
+
+            console.log(fruits);
+
+
+            fruits.pop();
+
+            console.log(fruits);
+
+
+
+
+
+        </script>
+
+
+    </body>
+</html>
