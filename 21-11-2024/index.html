@@ -1,0 +1,129 @@
+<html>
+    <body>
+        <script>
+
+            /* FILTER and REDUCE 
+            
+            Creates a new Array containing only elements that satisfy a given condition.
+            
+            */
+
+            ages = [10,25,30,15];
+            adults = ages.filter(num => num >= 18);
+            console.log(adults); 
+
+
+            // Reduce : reduces an array to a single value by applying a function
+
+            numbers = [1,2,3,4];
+            sum = numbers.reduce((total, num) => total + num, 0);
+            console.log(sum);
+
+
+            /* Array destructuring and Object destructuring 
+            
+            Syntax: const [var1, var2, ... rest] = array;
+            
+            */
+
+            fruits = ["apple", "bannana", "cherry"];
+            [first, second, third] = fruits;
+
+            console.log(second);
+            console.log(third);
+
+            // Skipping elements
+
+            numbers = [1,2,3,4];
+            [,second, ,fourth ] = numbers;
+
+            console.log(fourth);
+
+            // Using rest or ... operator
+
+            colors = ["red", "green", "blue", "yellow", "grey"];
+
+            [primary, secondary, ...others] = colors;
+
+            console.log(primary);
+            console.log(others);
+
+            // Default values
+
+            items = ["one", "two"];
+
+            [first="default1", second="default2"] = items;
+
+            console.log(first);
+            console.log(second);
+
+
+            // Object destructuring: allows you to extract specific properties from an object and assign them to variables
+            // Syntax const {prop1, prop2:alias, ..rest} = object
+
+
+            person = {name: "Alice", age: 25, city: "new york"};
+
+            const {name, age} = person;
+
+            //console.log(name);
+
+
+            // Renaming properties
+
+            person = {name: "Alice", age: 25};
+
+            const {name: firstName} = person;
+
+            console.log("FIRSTNAME " + firstName);
+
+
+            // Using ... rest operator
+
+            cars = { brand: "Tesla", model: "Model X", year: 2023};
+            const { brand, ...other } = cars;
+
+            console.log(brand);
+            console.log(other);
+
+
+            // Default values
+
+            const user = {name1: "Bob"};
+            const {name1, age1 = 25} = user;
+
+            console.log(name1);
+            console.log(age1)
+
+
+            // Nested 
+
+            const company = {
+
+                cname: "techcorp",
+                caddress: { city: "new york", zip: 500055}
+            };
+
+            const {caddress : {city, zip} } = company;
+
+            console.log(city);
+
+
+            // Combining array and object
+
+            const people = [
+                {pname: "Alice", age: 25 },
+                {pname: "Bod", age: 16 }
+            ];
+
+            const [{pname: firstName1 }, {pname: SecondpersonName, age: secon_p_age}] = people;
+
+            console.log(secon_p_age);
+
+            // Real time example
+
+
+
+        </script>
+    </body>
+</html>
