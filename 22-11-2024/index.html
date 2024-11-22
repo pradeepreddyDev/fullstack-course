@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title>DOM example</title>
+        <style>
+           .text {
+            background: grey;
+           }
+        </style>
+    </head>
+    <body>
+        <h1 id="heading">Hello world</h1>
+        <p class="text">This is paragraph</p>
+        <button id="btn">Click me</button>
+        <br><br><br>
+
+        <label>Enter your name</label>
+        <input type="text" id="nameInput" placeholder="Type your name..." />
+
+        <p> Hello <span id="nameDisplay" >Stranger</span>!</p>
+
+    </body>
+</html>
+
+<script>
+
+    /*
+    document
+    |----html
+           |---head
+                |__ title ("Dom Example")
+           |          
+           |___body
+                 |__h1#heading("Hello, world!")
+                 |__p.text ("This is paragraph")
+                 |__button#btn ("Click me")        
+    */
+
+    //Accessing element
+
+    heading = document.getElementById("heading");
+    paragraph = document.querySelector(".text");
+
+    console.log(heading);
+    console.log(paragraph);
+
+    // Modifying content
+    heading.textContent = "Welcome to the DOM";
+    paragraph.innerHTML = "<strong>DOM Is powerful</strong>"
+
+    // Adding Event Listeners
+
+    button = document.getElementById('btn');
+
+    button.addEventListener('click', () => {
+        alert('Button Clicked');
+    })
+
+    // Adding new elements
+
+    newElement = document.createElement('h6');
+    newElement.innerHTML = "this is a new paragraph added dynamically";
+    document.body.appendChild(newElement);
+
+
+    // Javascript Onchange event
+
+    nameInput = document.getElementById('nameInput');
+    nameDisplay = document.getElementById('nameDisplay');
+
+
+    nameInput.addEventListener('input', () => {
+        nameDisplay.textContent = nameInput.value || 'Strangers';
+    });
+
+
+
+
+
+
+
+
+
+</script>
+

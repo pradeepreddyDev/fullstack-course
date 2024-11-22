@@ -1,0 +1,27 @@
+<html>
+    <body>
+        <h3>
+            choose your favorite color:
+        </h3>
+        <select id="colorSelect" onchange="updateColor()" >
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Red</option>
+        </select>
+
+        <p>Your selected color is : <span id="selectedColor"> None</span> </p>
+
+        <script>
+
+            function updateColor() {
+                colorsSelect = document.getElementById("colorSelect");
+                selectedColor = document.getElementById("selectedColor");
+
+                selectedColor.textContent = colorsSelect.value;
+            }
+
+        </script>
+
+
+    </body>
+</html>
